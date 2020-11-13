@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>XYZ Clothing</title>
+  <title>XYZ Running Shoes</title>
 </head>
 <body>
 
 <!--NAVIGATION-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Admin Portal</a>
+  <a class="navbar-brand" href="#">XYZ Shoes</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,9 +32,6 @@
           <li class="nav-item active">
             <a class="navbar-brand" routerLink='/registration'>Register</a>
         </li>
-        <li class="nav-item active">
-          <a class="navbar-brand" routerLink='/admin-login'>Admin</a>
-      </li>
       <li class="nav-item active">
         <a class="navbar-brand" routerLink='/checkout'>Checkout</a>
     </li>
@@ -51,7 +48,19 @@
           </router-outlet>
 </main>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md"></div>
+        <!--Admin-->
+        <div class="col-md">
+            <a routerLink='/admin-login'>Admin</a>
+        </div>
+        
+        <!--Social-->
+        <div class="col-md">
 
-  
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -7,3 +7,71 @@
 {
     min-height:200px;
 }
+
+.asics
+{
+    background-image: url("/assets/asics_display.jpg");
+    height:500px;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.orion
+{
+    background-image: url("/assets/orion_display.jpg");
+    height:500px;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.nike
+{
+    background-image: url("/assets/nike_display.jpg");
+    height:500px; 
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.community
+{
+    background-image: url("/assets/marathon.jpg");
+    height:500px; 
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.community p
+{
+    margin-top:200px;
+    background-color:rgb(168, 166, 166, 0.75);
+    padding:5px;
+    margin:200px 10px 10px 10px;
+    color:white;
+}
+
+.community h2
+{
+    margin:10px;
+    color:red;
+    text-align:center;
+}
+
+.vision
+{
+    height:500px;
+    background-color:rgb(57, 34, 184);
+    color:white;
+    font-size:25px;
+}
+
+.vision p
+{
+    margin: 10px;
+}
+
+.vision h2
+{
+    margin:10px;
+    text-align: center;
+}
+
