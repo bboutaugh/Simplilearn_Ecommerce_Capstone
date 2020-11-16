@@ -1,0 +1,20 @@
+
+*
+{
+    color:white;
+}
+
+.row
+{
+    min-height:700px;
+}
+
+.btn
+{
+    background-color:gray;
+}
+
+.form-control
+{
+    width:500px;
+}

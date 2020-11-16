@@ -1,12 +1,28 @@
-*
+
+
+p
 {
-    border:2px solid red;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:25px;
 }
 
-.row
+h2, h3
 {
-    min-height:200px;
+    font-family: 'Goldman', cursive;
+    color:white;
 }
+
+.row-header
+{
+    padding:10px;
+    text-align:center;
+}
+
+.row-bottom-margin
+{
+    margin-bottom:75px;
+}
+
 
 .asics
 {
@@ -27,7 +43,7 @@
 .nike
 {
     background-image: url("/assets/nike_display.jpg");
-    height:500px; 
+    height:500px;
     background-repeat:no-repeat;
     background-size:cover;
 }
@@ -47,6 +63,7 @@
     padding:5px;
     margin:200px 10px 10px 10px;
     color:white;
+    font-size: 20px;
 }
 
 .community h2
@@ -58,20 +75,62 @@
 
 .vision
 {
-    height:500px;
+    height:400px;
+    width: 700px;
+    padding:10px;
     background-color:rgb(57, 34, 184);
     color:white;
     font-size:25px;
+    margin:20px;
 }
 
 .vision p
 {
-    margin: 10px;
+    margin: 50px 10px 10px 10px;
 }
 
 .vision h2
 {
     margin:10px;
     text-align: center;
+}
+
+.card-body
+{
+    background-color: lightgray;
+}
+
+.card img
+{
+height:350px;
+}
+
+.men
+{
+    background-image: url("/assets/shop_mens.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:400px;
+    color:red;
+}
+
+.women
+{
+    background-image: url("/assets/shop_womens.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:400px;
+}
+
+.women h2
+{
+    color:red;
+    padding:10px;
+}
+
+.men h2
+{
+    color:red;
+    padding:10px;
 }
 

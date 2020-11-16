@@ -1,0 +1,27 @@
+*
+{
+    color:white;
+}
+
+.btn
+{
+    background-color:gray;
+}
+
+.form-control
+{
+    width:500px;
+}
+
+.row
+{
+    min-height:700px;
+}
+
+.extra
+{
+    background-image:url("/assets/shoes_in_air.jpg")
+}
+
+
+

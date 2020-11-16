@@ -15,8 +15,7 @@ export class AdminComponent implements OnInit {
          productQuantity: new FormControl(),
          productSize: new FormControl(),
          productBrand: new FormControl(),
-         productDiscount: new FormControl(),
-         isOnSale: new FormControl()
+         productDiscount: new FormControl()
   });
 
   constructor(public productService:ProductService) { }

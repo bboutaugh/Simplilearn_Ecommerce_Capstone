@@ -7,7 +7,6 @@ export class Product
          public productImage: string,
          public productBrand: string,
          public productQuantity: number,
-         public isOnSale: boolean,
          public productDiscount: number
      ){}
 }

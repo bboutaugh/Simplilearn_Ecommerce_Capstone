@@ -5,8 +5,8 @@ var mongoose = require("mongoose");
 var port = 9090;
 var cors = require("cors");
 
-//Database URL Details
-var url = "mongodb://localhost:27017/ecommerceDB";
+//Database Configuration
+const config = require('./DB');
 
 //Creating reference of express
 var app = express();

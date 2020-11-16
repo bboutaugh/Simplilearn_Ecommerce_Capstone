@@ -10,7 +10,6 @@ var ProductSchemaRef = new ProductSchema(
          productImage: String,
          productBrand: String,
          productQuantity: Number,
-         isOnSale: Boolean,
          productDiscount: Number
     }
 );
