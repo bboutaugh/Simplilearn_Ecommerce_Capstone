@@ -12,6 +12,6 @@ export class ProductService {
 
   storeProductDetailsInDB(prodRef): Observable<any>
   {
-    return this.httpClient.post("http://localhost:9090/product/storeProduct",prodRef);
+    return this.httpClient.post("http://localhost:5000/product/storeProduct",prodRef);
   }
 }

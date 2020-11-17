@@ -6,21 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { UserLoginComponent } from './user-login/user-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductsComponent,
-    RegistrationComponent,
-    UserLoginComponent,
     AdminLoginComponent,
     CheckoutComponent,
     ContactComponent,
@@ -32,7 +30,8 @@ import { AdminComponent } from './admin/admin.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
