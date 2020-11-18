@@ -1,10 +1,10 @@
 const Users = require('./model.user');
-const environment = require('./DB');
+const env = require('./DB');
 const jwt = require('jsonwebtoken');
 
 exports.register = function (req,res)
 {
-    const{username, email, password, passwordConfirmation} = req.body
+    const{username, email, password, passwordConfirmation, userStatus} = req.body
     if (!email || !password) 
     {
         return res.status(422).json({ 'error': 'Please provide email or password' })
@@ -25,7 +25,7 @@ exports.register = function (req,res)
         else 
         {
           const user = new Users({
-            username, email, password
+            username, email, password, userStatus
           })
           user.save(function (err) {
             if (err) {
@@ -39,7 +39,8 @@ exports.register = function (req,res)
       })
      }
 
-     exports.login = function (req, res) { 
+     exports.login = function (req, res) 
+     { 
         const { email, password } = req.body
       
         if (!email || !password) {
@@ -48,7 +49,7 @@ exports.register = function (req,res)
         Users.findOne({ email }, function (err, user) {
           if (err) {
             return res.status(422).json({
-              'error': 'Fault'
+              'error': 'Fault1'
             })
           }
       
@@ -56,7 +57,8 @@ exports.register = function (req,res)
             return res.status(422).json({ 'error': 'Invalid user' })
           }
       
-          if (user.hasSamePassword(password)) {
+          if (user.hasSamePassword(password)) 
+          {
             json_token = jwt.sign(
               {
                 userId: user.id,
@@ -68,7 +70,7 @@ exports.register = function (req,res)
             return res.json(json_token)
           }
           else {
-            return res.status(422).json({ 'error': 'Fault' })
+            return res.status(422).json({ 'error': 'Invalid password. Please try again.' })
           }
         })
       }

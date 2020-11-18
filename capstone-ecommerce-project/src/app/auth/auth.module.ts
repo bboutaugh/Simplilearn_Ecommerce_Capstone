@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AuthComponent } from './auth.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { UserLoginComponent } from './user-login/user-login.component';
+import { LoginComponent } from './login/login.component';
 
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
@@ -17,7 +17,7 @@ const routes: Routes = [
     path: 'auth',
     component: AuthComponent,
     children: [
-      { path: 'user-login', component: UserLoginComponent, canActivate: [AuthGuard] },
+      { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
       { path: 'registration', component: RegistrationComponent, canActivate: [AuthGuard] }
     ]
   }
@@ -26,7 +26,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     RegistrationComponent,
-    UserLoginComponent,
+    LoginComponent,
     AuthComponent
   ],
   imports: [

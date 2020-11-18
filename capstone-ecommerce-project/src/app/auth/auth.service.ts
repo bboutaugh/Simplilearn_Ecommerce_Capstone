@@ -11,6 +11,7 @@ class DecodedToken
 {
   exp: number;
   username: string;
+  userStatus: string;
 }
 
 @Injectable({
@@ -31,7 +32,7 @@ export class AuthService {
   }
 
   public login(userData: any): Observable<any> {
-    const URI = this.uriseg + '/user-login';
+    const URI = this.uriseg + '/login';
     return this.http.post(URI, userData).pipe(map(token => {
       return this.saveToken(token);
     }));
@@ -51,11 +52,27 @@ export class AuthService {
     this.decodedToken = new DecodedToken();
   }
 
-  public isAuthenticated(): boolean {
+  public isAuthenticated(): boolean 
+  {
     return moment().isBefore(moment.unix(this.decodedToken.exp));
   }
 
-  public getUsername(): string {
+  public getUsername(): string 
+  {
+    console.log(this.decodedToken.username);
     return this.decodedToken.username;
+  }
+
+  public isAdmin():boolean
+  {
+    if (this.decodedToken.userStatus === "admin")
+    {
+      return true;
+    }
+    else if(this.decodedToken.userStatus === "user")
+    {
+      return false;
+    }
+
   }
 }

@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthModule } from './auth/auth.module';
+import { CommonModule } from '@angular/common';  
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AuthModule
+    AuthModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
