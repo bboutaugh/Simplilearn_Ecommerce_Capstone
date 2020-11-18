@@ -1,24 +1,20 @@
-var ProductModel = require("./model.product.js");
+const ProductModel = require("./model.product.js");
 
 
-var StoreProductInfo = (req,res)=>
+var StoreProduct = (req,res)=>
 {
-    let product = new ProductModel
-    ({
-        productID:req.body.productID,
-        productName:req.body.productName,
-        productPrice:req.body.productPrice,
-        productImage:req.body.productImage,
-        productBrand:req.body.productBrand,
-        productQuantity:req.body.productQuantity,
-        isOnSale:req.body.isOnSale,
-        productDiscount:req.body.productDiscount,
+    let product = new ProductModel({
+        productID: req.body.productID,
+        productName: req.body.productName,
+        productPrice: req.body.productPrice,
+        productBrand: req.body.productBrand,
+        productQuantity: req.body.productQuantity,
+        productDiscount: req.body.productDiscount,
+        productGender: req.body.productGender
 
-    });
+    })
 
-    product.save((err,result)=>
-    {
-
+    product.save((err,result)=>{
         if(err)
         {
             res.json({"msg":"Id must be unique"});
@@ -30,4 +26,13 @@ var StoreProductInfo = (req,res)=>
     });
 }
 
-module.exports = {StoreProductInfo};
+var GetProducts = (req,res)=>
+{
+    ProductModel.find({},(err,data)=>
+    {
+        if(err) throw err;
+        res.json(data);
+    })
+}
+
+module.exports = {StoreProduct, GetProducts};

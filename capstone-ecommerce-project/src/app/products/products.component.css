@@ -1,0 +1,35 @@
+p{
+    color:white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:25px;
+}
+
+img
+{
+    width:300px;
+}
+
+.container
+{
+    border:2px solid white;
+    border-radius:5px;
+    box-shadow:shadow 20px;
+    background-color:rgb(115, 115, 230);
+    margin:10px auto 10px auto;
+}
+
+svg
+{
+    color:white;
+}
+
+button
+{
+    margin:auto;
+    border-radius:10px;
+}
+
+button p
+{
+    color: black;
+}

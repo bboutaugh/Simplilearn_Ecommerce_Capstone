@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 mongoose.pluralize(null);
 var ProductSchema = mongoose.Schema;
 
-var ProductSchemaRef = new ProductSchema(
+var ProductSchemaRef = mongoose.Schema(
     {
          productID: Number,
          productName: String,
@@ -10,7 +10,8 @@ var ProductSchemaRef = new ProductSchema(
          productImage: String,
          productBrand: String,
          productQuantity: Number,
-         productDiscount: Number
+         productDiscount: Number,
+         productGender: String
     }
 );
 

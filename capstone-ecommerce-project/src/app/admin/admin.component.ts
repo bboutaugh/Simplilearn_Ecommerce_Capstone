@@ -12,10 +12,12 @@ export class AdminComponent implements OnInit {
          productID: new FormControl(),
          productName: new FormControl(),
          productPrice: new FormControl(),
+         productImage: new FormControl(),
          productQuantity: new FormControl(),
          productSize: new FormControl(),
          productBrand: new FormControl(),
-         productDiscount: new FormControl()
+         productDiscount: new FormControl(),
+         productGender:new FormControl()
   });
 
   constructor(public productService:ProductService) { }
@@ -25,7 +27,8 @@ export class AdminComponent implements OnInit {
 
   storeProduct():void
   {
-    this.productService.storeProductDetailsInDB(this.productInput.value).subscribe(data=>this.result=data.msg);
+    console.log("button clicked");
+    this.productService.storeProduct(this.productInput.value).subscribe(data=>this.result=data.msg);
   }
 
 }

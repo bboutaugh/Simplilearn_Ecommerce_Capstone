@@ -7,6 +7,7 @@ const cors = require("cors");
 //Database Configuration
 const config = require('./DB');
 var User = require('./user.router');
+var Product = require('./product.router');
 const PORT = process.env.PORT || 5000;
 
 mongoose.set('useNewUrlParser',true);
@@ -42,12 +43,9 @@ app.use(cors(corsOptions)); //Enable CORS features
 //mongoose.connection;
 
 //Coding operations
-var Product = require("./product.router.js");
-
-
 //Middleware
-app.use("/product",Product);
 app.use('/api/users',User);
+app.use("/api/products", Product);
 
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
