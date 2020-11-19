@@ -35,4 +35,67 @@ var GetProducts = (req,res)=>
     })
 }
 
-module.exports = {StoreProduct, GetProducts};
+var GetProductByID = (req,res)=>
+{
+    var id = req.params.productID;
+    console.log(id);
+    ProductModel.find({productID:id},(err,data)=>
+    {
+        if(err) throw err;
+        res.json(data);
+    })
+}
+
+var GetProductsByGender = (req,res)=>
+{
+    var gender = req.body.productGender;
+    ProductModel.find({productGender:gender},(err,data)=>
+    {
+        if(err) throw err;
+        res.json(data);
+    })
+}
+
+var GetProductsByBrand = (req,res)=>
+{
+    var brand = req.body.productBrand;
+    ProductModel.find({productBrand:brand},(err,data)=>
+    {
+        if(err) throw err;
+        res.json(data);
+    })
+}
+
+var UpdateProduct = (req, res) =>
+{
+    var currentProductID = req.body.productID;
+    var newProductPrice = req.body.productPrice;
+    var newProductDiscount = req.body.productDiscount;
+    var newProductQuantity = req.body.productQuantity;
+    ProductModel.update({productID:currentProductID}, 
+        {$set:{productPrice:newProductPrice, productDiscount:newProductDiscount, productQuantity:newProductQuantity}});
+    if(result.nModified>0)
+    {
+        res.json({"msg":"Update successful"});
+    }
+    else
+    {
+        res.json({"msg":"Updated failed."});
+    }
+}
+
+var DeleteProduct = (req,res)=> {
+    var deleteID = req.body.productID;
+    ProductModel.deleteOne({productID:deleteID},(err,result)=> {
+        if(err) throw err;
+       if(result.deletedCount>0)
+       {
+           res.json({"msg":"Record deleted successfully"});
+       }else 
+       {
+           res.json({"msg":"Record not present"});
+       }
+    })   
+}
+
+module.exports = {StoreProduct, GetProducts, GetProductsByBrand, GetProductsByGender, GetProductByID, UpdateProduct, DeleteProduct};

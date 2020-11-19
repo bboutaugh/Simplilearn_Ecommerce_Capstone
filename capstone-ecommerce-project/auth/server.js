@@ -7,6 +7,7 @@ const cors = require("cors");
 //Database Configuration
 const config = require('./DB');
 var User = require('./user.router');
+var Purchase = require('./purchase.router');
 var Product = require('./product.router');
 const PORT = process.env.PORT || 5000;
 
@@ -35,17 +36,9 @@ let corsOptions = {
 
 app.use(cors(corsOptions)); //Enable CORS features
 
-
-//Database connection
-//mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true});
-
-//Connect to database
-//mongoose.connection;
-
-//Coding operations
-//Middleware
 app.use('/api/users',User);
 app.use("/api/products", Product);
+app.use("/api/purchases", Purchase);
 
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);

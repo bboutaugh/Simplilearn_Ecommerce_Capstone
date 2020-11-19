@@ -4,6 +4,7 @@ import {AuthService} from './auth/auth.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
+import {CartItem} from './CartItem';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,11 @@ import { BrowserModule } from '@angular/platform-browser';
 export class AppComponent {
   title = 'capstone-ecommerce-project';
   constructor(public auth:AuthService, private router:Router){}
-  ngOnInit():void{}
+  
+ 
+
+  ngOnInit():void
+  {}
 
   logout():void
   {

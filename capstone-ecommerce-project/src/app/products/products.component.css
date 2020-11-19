@@ -20,16 +20,26 @@ img
 
 svg
 {
-    color:white;
+    color:green;
 }
 
 button
 {
-    margin:auto;
+    margin:50% auto 50% auto;
     border-radius:10px;
 }
 
 button p
 {
     color: black;
+}
+
+.favorite
+{
+    width:200px;
+}
+
+.footer
+{
+    min-height:200px;
 }

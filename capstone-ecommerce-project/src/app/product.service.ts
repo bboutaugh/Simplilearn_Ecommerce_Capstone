@@ -25,4 +25,31 @@ export class ProductService
   {
     return this.httpClient.get<Product[]>("http://localhost:5000/api/products/getProducts");
   }
+
+  getProductsByGender(productGender):Observable<Product[]>
+  {
+    return this.httpClient.get<Product[]>("http://localhost:5000/api/products/getProductsByGender/"+productGender);
+  }
+
+  getProductByID(productID):Observable<Product>
+  {
+    return this.httpClient.get<Product>("http://localhost:5000/api/products/getProductByID/"+productID);
+  }
+
+  getProductsByBrand(productBrand):Observable<Product[]>
+  {
+    return this.httpClient.get<Product[]>("http://localhost:5000/api/products/getProductsByBrand/"+productBrand);
+  }
+
+  updateProduct(productRef):Observable<any>
+  {
+    return this.httpClient.put("http://localhost:5000/api/products/updateProduct", productRef);
+  }
+
+  deleteProduct(productID):Observable<any>
+  {
+    return this.httpClient.delete("http://localhost:5000/api/products/deleteProduct/"+productID);
+  }
+
+  
 }

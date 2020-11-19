@@ -64,11 +64,11 @@ export class AuthService {
 
   public isAdmin():boolean
   {
-    if (this.decodedToken.userStatus === "admin")
+    if (this.decodedToken.userStatus == "admin")
     {
       return true;
     }
-    else if(this.decodedToken.userStatus === "user")
+    else if(this.decodedToken.userStatus == "user")
     {
       return false;
     }

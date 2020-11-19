@@ -27,7 +27,6 @@ export class AdminComponent implements OnInit {
 
   storeProduct():void
   {
-    console.log("button clicked");
     this.productService.storeProduct(this.productInput.value).subscribe(data=>this.result=data.msg);
   }
 

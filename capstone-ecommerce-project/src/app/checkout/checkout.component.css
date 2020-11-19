@@ -1,0 +1,42 @@
+*
+{
+    color:white;
+}
+
+img
+{
+    width:200px;
+}
+
+button
+{
+    color:black;
+    float:right;
+}
+
+tr
+{
+    border:2px dashed white;
+}
+
+td
+{
+    padding:10px;
+}
+
+.footer
+{
+    min-height: 200px;
+}
+
+.btn
+{
+    color:black;
+    background-color:lightblue;
+}
+
+input
+{
+    color: black;
+}
+

@@ -6,10 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthModule } from './auth/auth.module';
 import { CommonModule } from '@angular/common';  
@@ -20,10 +17,7 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     HomeComponent,
     ProductsComponent,
-    AdminLoginComponent,
     CheckoutComponent,
-    ContactComponent,
-    AboutComponent,
     AdminComponent
   ],
   imports: [
